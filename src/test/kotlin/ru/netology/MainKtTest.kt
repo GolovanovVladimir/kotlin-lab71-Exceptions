@@ -7,17 +7,33 @@ class MainKtTest {
 
     @Test
     fun wallServiceAddCommentTrue() {
-        var postId = 1
-        var result: Boolean = WallService.findById(postId)
-        assertEquals(true,result)
+        val post = Post(1,1,1,1,1,"cheking",1,1,1,"lya-lya",true,true,1,null,null)
+        var postId = post.id
+        var result = false
+        val comment0 = Comment(10,"678")
+        WallService.Add(post)
+        result= WallService.findById(postId)
+        if (result == true)
+        {
+            WallService.createComment(postId, comment0)
+        }
+        assertEquals(true, result)
+
     }
 
-// (expected = PostNotFoundException::class)
-    @Test
+    @Test(expected = PostNotFoundException::class)
     fun shouldThrow() {
+        val post = Post(1,1,1,1,1,"cheking",1,1,1,"lya-lya",true,true,1,null,null)
         var postId = -1
-        if (WallService.findById(postId) == false) {
-            throw PostNotFoundException("No exist post with $postId")
+        var result = false
+        val comment0 = Comment(10,"678")
+        WallService.Add(post)
+        if (WallService.findById(postId) == true){
+            WallService.createComment(postId, comment0)
+        }
+        else
+        {
+            throw PostNotFoundException("No exist post with ${post.id}")
         }
     }
 }

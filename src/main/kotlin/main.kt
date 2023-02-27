@@ -19,15 +19,15 @@ fun main() {
    WallService.update(post2)
    WallService.update(post3)
    WallService.printPosts()
-   val comment0 = Comment(10,"678")
+   val comment0 = Comment(10,"678",)
    try {
-      val comment2 = WallService.createComment(1, comment0)
+      WallService.createComment(1, comment0)
    } catch (e: NotImplementedError) {
       println("I'm catching NotImplementedError")
       }
    val comment3 = Comment(666,"12345")
    try {
-      val comment4 = WallService.createComment(2, comment3) /* исправить 2 на 3 для проверки exception  c*/
+      WallService.createComment(1, comment3)
    } catch (e: NotImplementedError) {
       println("I'm catching NotImplementedError")
    }
@@ -105,7 +105,7 @@ data class Post(
 data class Comment(
    val id: Int,
    val text: String
-/* val from_id: Int,
+/*   val from_id: Int
    val date: Int,
    val reply_to_user: Int,
    val reply_to_comment: Int,
