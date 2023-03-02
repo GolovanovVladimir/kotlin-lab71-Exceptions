@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.MainKtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-28T19:54:13" hostname="QLIKVIEW-PC" time="0.17">
+<testsuite name="ru.netology.MainKtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-02T21:23:29" hostname="QLIKVIEW-PC" time="0.15">
   <properties/>
-  <testcase name="wallServiceAddCommentTrue" classname="ru.netology.MainKtTest" time="0.166"/>
-  <testcase name="shouldThrow" classname="ru.netology.MainKtTest" time="0.003"/>
+  <testcase name="wallServiceAddCommentTrue" classname="ru.netology.MainKtTest" time="0.149"/>
+  <testcase name="shouldThrow" classname="ru.netology.MainKtTest" time="0.0"/>
   <system-out><![CDATA[Post added
+New comment added
 Post added
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
